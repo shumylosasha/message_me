@@ -21,7 +21,17 @@ $(document).on('turbolinks:load', function() {
     $(this).closest('.message').transition('fade');
   });
   scroll_bottom();
+  submig_message();
 })
+
+window.submig_message = function () {
+  $("#message_body").on("keydown", function (e) {
+    if (e.keyCode == 13) {
+      $("button").click();
+      e.target.value = "";
+    };
+  });
+};
 
 window.scroll_bottom = function () {
   if ($("#messages").length > 0) {
