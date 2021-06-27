@@ -5,6 +5,7 @@
   height: 450px;
 }
 
-.header {
-  margin-bottom: 30px !important;
+#messages {
+  overflow: auto;
+  height: 15em;
 }
